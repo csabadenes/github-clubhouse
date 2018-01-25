@@ -60,7 +60,7 @@ function _issueToStory(authorId, projectId, issue, issueComments) {
   return {
     project_id: projectId,
     name: issue.title,
-    description: issue.body,
+    description: issue.body || '',
     comments: _presentGithubComments(authorId, issueComments),
     created_at: issue.created_at,
     updated_at: issue.updated_at,
